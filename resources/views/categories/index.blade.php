@@ -1,7 +1,7 @@
 @extends('layouts.master')
 
 @section('title')
-    <title>Manajemen Kategori</title>
+    Manajemen Kategori
 @endsection
 
 @section('content')
@@ -37,7 +37,7 @@
                                 @endcomponent
                             @endif
 
-                            <form role="form" action="{{ route('kategori.store') }}" method="POST">
+                            <form role="form" action="{{ route('categories.store') }}" method="POST">
                                 @csrf
                                 <div class="form-group">
                                     <label for="name">Kategori</label>
@@ -87,10 +87,10 @@
                                             <td>{{ $row->name }}</td>
                                             <td>{{ $row->description }}</td>
                                             <td>
-                                                <form action="{{ route('kategori.destroy', $row->id) }}" method="POST">
+                                                <form action="{{ route('categories.destroy', $row->id) }} " onsubmit="return confirm('Apakah Anda Yakin Menghapus Kategori ' + '{{ $row->name }}' + '?');" method="POST">
                                                     @csrf
                                                     <input type="hidden" name="_method" value="DELETE">
-                                                    <a href="{{ route('kategori.edit', $row->id) }}" class="btn btn-warning btn-sm"><i class="fa fa-edit"></i></a>
+                                                    <a href="{{ route('categories.edit', $row->id) }}" class="btn btn-warning btn-sm"><i class="fa fa-edit"></i></a>
                                                     <button class="btn btn-danger btn-sm"><i class="fa fa-trash"></i></button>
                                                 </form>
                                             </td>

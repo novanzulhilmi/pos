@@ -21,7 +21,7 @@ class CustomerSeeder extends Seeder
                 'address' => $faker->address,
                 'phone' => '0'.$faker->numberBetween(81200000000, 82112345678),
             ]);
-        }   
+        }
 
     }
 }

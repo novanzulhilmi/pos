@@ -19,6 +19,8 @@ class ProductSeeder extends Seeder
             for ($i = 0; $i < 10; $i++) {
                 \App\Models\Product::create([
                     'category_id' => $category->id,
+                    'code' => $faker->unique()->word,
+                    'photo' => $faker->imageUrl(640,  480, 'business'),
                     'name' => $faker->word,
                     'description' => $faker->text,
                     'stock' => $faker->numberBetween(1, 100),

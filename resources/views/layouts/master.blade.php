@@ -171,7 +171,7 @@
           <img src="{{ asset('/assets')}}/dist/img/user2-160x160.jpg" class="img-circle elevation-2" alt="User Image">
         </div>
         <div class="info">
-          <a href="#" class="d-block">Alexander Pierce</a>
+          <a href="#" class="d-block">Novan Zulhilmi</a>
         </div>
       </div>
 
@@ -193,7 +193,7 @@
           <!-- Add icons to the links using the .nav-icon class
                with font-awesome or any other icon font library -->
           <li class="nav-item">
-            <a href="#" class="nav-link">
+            <a href="{{ "./" }}" class="nav-link">
               <i class="nav-icon fas fa-tachometer-alt"></i>
               <p>
                 Dashboard
@@ -201,15 +201,15 @@
             </a>
           </li>
           <li class="nav-item">
-            <a href="{{ "/category" }}" class="nav-link">
-              <i class="nav-icon fas fa-th"></i>
+            <a href="{{ "/categories" }}" class="nav-link">
+              <i class="nav-icon fas fa-list"></i>
               <p>
                 Kategori
               </p>
             </a>
           </li>
           <li class="nav-item">
-            <a href="{{ "/product" }}" class="nav-link">
+            <a href="{{ "/products" }}" class="nav-link">
               <i class="nav-icon fas fa-th"></i>
               <p>
                 Produk
@@ -251,7 +251,7 @@
 
   <footer class="main-footer">
     <div class="float-right d-none d-sm-block">
-      <b>Version</b> 0.0.1
+      <b>Version</b> 0.1.1
     </div>
     <strong>Copyright &copy; 2024-<?= date('Y') ?> <a href="https://www.instagram.com/novan.zulhilmi/" target="blank">Novan Zulhilmi</a>.</strong> All rights reserved.
   </footer> 
