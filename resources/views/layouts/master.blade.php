@@ -217,7 +217,7 @@
             </a>
           </li>
           <li class="nav-item">
-            <a href="{{ "/customer" }}" class="nav-link">
+            <a href="{{ "/customers" }}" class="nav-link">
               <i class="nav-icon fas fa-th"></i>
               <p>
                 Pelanggan
@@ -225,8 +225,8 @@
             </a>
           </li>
           <li class="nav-item">
-            <a href="{{ "/order" }}" class="nav-link">
-              <i class="fa fa-shopping-bag"></i>
+            <a href="{{ "/orders" }}" class="nav-link">
+              <i class="nav-icon fa fa-shopping-bag"></i>
               <p>
                 Pesanan
               </p>
@@ -240,6 +240,28 @@
               </p>
             </a>
           </li>
+          {{-- <li class="nav-item">
+            <a href="{{ route('logout') }}" class="nav-link" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
+              <i class="nav-icon fa fa-sign-out-alt"></i>
+              <p>
+                Keluar
+              </p>
+            </a>
+              <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                {{ csrf_field() }}
+              </form>
+          </li> --}}
+          <li class="nav-item">
+            <form method="POST" action="{{ route('logout') }}" id="logout-form">
+              @csrf
+              <a href="#" class="nav-link" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
+                <i class="nav-icon fas fa-sign-out-alt"></i>
+                <p>
+                  Logout
+                </p>
+              </a>
+            </form>
+          </li>
         </ul>
       </nav>
       <!-- /.sidebar-menu -->
@@ -251,7 +273,7 @@
 
   <footer class="main-footer">
     <div class="float-right d-none d-sm-block">
-      <b>Version</b> 0.1.1
+      <b>Version</b> 1.0.0
     </div>
     <strong>Copyright &copy; 2024-<?= date('Y') ?> <a href="https://www.instagram.com/novan.zulhilmi/" target="blank">Novan Zulhilmi</a>.</strong> All rights reserved.
   </footer> 

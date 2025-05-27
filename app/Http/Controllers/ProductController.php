@@ -82,7 +82,7 @@ class ProductController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(string $id)
+    public function edit($id)
     {
         $product = Product::findOrFail($id);
         $categories = Category::orderBy('name', 'ASC')->get();
@@ -92,9 +92,9 @@ class ProductController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, string $id)
+    public function update(Request $request, $id)
     {
-        $this->validate($request, [
+        $request->validate([
             'code' => 'required|string|max:10|exists:products,code',
             'name' => 'required|string|max:100',
             'description' => 'nullable|string|max:100',
